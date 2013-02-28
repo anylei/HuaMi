@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HMViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
 
 @end
