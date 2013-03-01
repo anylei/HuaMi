@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,13 +27,16 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kg-YC-WFw">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Copy">
+                                <state key="normal" title="Generate">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="copyButtonTapped:" destination="2" eventType="touchUpInside" id="IYc-0I-6hU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aN-mu-Etg">
                                 <constraints>
@@ -46,19 +49,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1aN-mu-Etg" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="3i5-e6-Odw"/>
+                            <constraint firstItem="1aN-mu-Etg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="166" id="7MG-Gp-cze"/>
                             <constraint firstItem="Z9o-5S-QwW" firstAttribute="trailing" secondItem="00P-eU-jdU" secondAttribute="trailing" type="default" id="7S3-To-wsw"/>
-                            <constraint firstItem="00P-eU-jdU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="159" id="CJB-jS-Epl"/>
-                            <constraint firstItem="1aN-mu-Etg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="263" id="Ejc-FS-8jp"/>
-                            <constraint firstItem="Z9o-5S-QwW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="101" id="Hkz-ss-SAr"/>
-                            <constraint firstAttribute="bottom" secondItem="3kg-YC-WFw" secondAttribute="bottom" constant="202" id="f69-So-aXn"/>
+                            <constraint firstItem="00P-eU-jdU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="111" id="gBm-8E-LPN"/>
                             <constraint firstItem="1aN-mu-Etg" firstAttribute="centerX" secondItem="3kg-YC-WFw" secondAttribute="centerX" type="default" id="gXF-pw-1yf"/>
+                            <constraint firstItem="3kg-YC-WFw" firstAttribute="top" secondItem="1aN-mu-Etg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mfG-tz-dy9"/>
+                            <constraint firstItem="Z9o-5S-QwW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="54" id="pOd-Uu-n8P"/>
                             <constraint firstItem="1aN-mu-Etg" firstAttribute="centerX" secondItem="00P-eU-jdU" secondAttribute="centerX" type="default" id="peW-Zb-VSW"/>
                             <constraint firstItem="Z9o-5S-QwW" firstAttribute="leading" secondItem="00P-eU-jdU" secondAttribute="leading" type="default" id="xKJ-Zk-nra"/>
+                            <constraint firstItem="1aN-mu-Etg" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="zpv-eJ-EDA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="keyTextField" destination="00P-eU-jdU" id="odx-xZ-gAl"/>
                         <outlet property="pwdTextField" destination="Z9o-5S-QwW" id="feI-jJ-FuR"/>
+                        <outlet property="resultLabel" destination="1aN-mu-Etg" id="1Gd-4P-m0T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -69,7 +74,10 @@
         <class className="HMViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HMViewController.h"/>
             <relationships>
+                <relationship kind="action" name="copyButtonTapped:"/>
+                <relationship kind="outlet" name="keyTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="pwdTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

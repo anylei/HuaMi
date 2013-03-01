@@ -27,6 +27,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)copyButtonTapped:(id)sender {
+    NSLog(@"---------------");
+    NSString *result = [self calPassword:self.pwdTextField.text key:self.keyTextField.text];
+    self.resultLabel.text = result;
+}
+
 - (NSString *) calPassword:(NSString *)password key:(NSString *)key {
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
 
@@ -56,6 +62,8 @@
     } else {
         code16 = [@"K" stringByAppendingString:[md5two substringWithRange:NSMakeRange(1, 15)]];
     }
+    
+    return code16;
 }
 
 @end

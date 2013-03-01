@@ -10,6 +10,9 @@
 
 @interface HMViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
+@property (weak, nonatomic) IBOutlet UITextField *keyTextField;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 - (NSString *)calPassword:(NSString *)password key:(NSString *)key;
+-(IBAction)copyButtonTapped:(id)sender;
 @end
