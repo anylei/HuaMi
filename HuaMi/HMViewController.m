@@ -28,9 +28,11 @@
 }
 
 - (IBAction)copyButtonTapped:(id)sender {
-    NSLog(@"---------------");
     NSString *result = [self calPassword:self.pwdTextField.text key:self.keyTextField.text];
     self.resultLabel.text = result;
+
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = result;
 }
 
 - (NSString *) calPassword:(NSString *)password key:(NSString *)key {
