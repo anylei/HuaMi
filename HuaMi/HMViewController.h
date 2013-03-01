@@ -11,4 +11,5 @@
 @interface HMViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
 
+- (NSString *)calPassword:(NSString *)password key:(NSString *)key;
 @end

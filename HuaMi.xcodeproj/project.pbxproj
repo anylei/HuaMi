@@ -18,6 +18,7 @@
 		B64DE94816DFA91E00409887 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64DE94716DFA91E00409887 /* Default-568h@2x.png */; };
 		B64DE94B16DFA91E00409887 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64DE94916DFA91E00409887 /* MainStoryboard.storyboard */; };
 		B64DE94E16DFA91E00409887 /* HMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64DE94D16DFA91E00409887 /* HMViewController.m */; };
+		B6BB853416E09408008FBD93 /* NSString+MyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BB853316E09408008FBD93 /* NSString+MyCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		B64DE94A16DFA91E00409887 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B64DE94C16DFA91E00409887 /* HMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMViewController.h; sourceTree = "<group>"; };
 		B64DE94D16DFA91E00409887 /* HMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMViewController.m; sourceTree = "<group>"; };
+		B6BB853216E09408008FBD93 /* NSString+MyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MyCategory.h"; sourceTree = "<group>"; };
+		B6BB853316E09408008FBD93 /* NSString+MyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MyCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				B64DE94916DFA91E00409887 /* MainStoryboard.storyboard */,
 				B64DE94C16DFA91E00409887 /* HMViewController.h */,
 				B64DE94D16DFA91E00409887 /* HMViewController.m */,
+				B6BB853216E09408008FBD93 /* NSString+MyCategory.h */,
+				B6BB853316E09408008FBD93 /* NSString+MyCategory.m */,
 				B64DE93816DFA91E00409887 /* Supporting Files */,
 			);
 			path = HuaMi;
@@ -177,6 +182,7 @@
 				B64DE93E16DFA91E00409887 /* main.m in Sources */,
 				B64DE94216DFA91E00409887 /* HMAppDelegate.m in Sources */,
 				B64DE94E16DFA91E00409887 /* HMViewController.m in Sources */,
+				B6BB853416E09408008FBD93 /* NSString+MyCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +298,7 @@
 				B64DE95316DFA91E00409887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
